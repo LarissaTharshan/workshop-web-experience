@@ -1,0 +1,9 @@
+# IntelliJ / WebStorm
+.idea/
+*.iml
+
+# Betriebssystem
+.DS_Store
+Thumbs.db
+
+node_modules/
