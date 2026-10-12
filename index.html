@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wer malte wann? – Timeline-Auswahl</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="css/timeline.css">
+</head>
+<body>
+<main class="page">
+
+    <header class="intro">
+        <div>
+            <p class="overline">Künstler:in wählen</p>
+            <h1>Wer malte wann?</h1>
+            <p class="lead">Jeder Balken zeigt die Lebenszeit. Wähle eine Person, um mehr zu erfahren.</p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Nach Epoche filtern">
+            <button type="button" class="chip" data-filter="all" aria-pressed="true">Alle</button>
+            <button type="button" class="chip" data-filter="gotik" aria-pressed="false">Spätgotik</button>
+            <button type="button" class="chip" data-filter="ren" aria-pressed="false">Renaissance</button>
+            <button type="button" class="chip" data-filter="bar" aria-pressed="false">Barock</button>
+        </div>
+    </header>
+
+    <section aria-label="Zeitachse 1400 bis 1700">
+        <div class="timeline">
+            <div class="track" id="track">
+                <div class="guide" id="guide" hidden></div>
+            </div>
+            <div class="axis" id="axis">
+                <span class="guide-year" id="guide-year" hidden></span>
+            </div>
+        </div>
+    </section>
+
+    <article class="detail" id="detail" aria-live="polite" hidden>
+        <div class="detail-swatch" id="detail-epoch"></div>
+        <div class="detail-body">
+            <h2 id="detail-name"></h2>
+            <p class="detail-years" id="detail-years"></p>
+            <dl class="detail-facts">
+                <div>
+                    <dt>Wirkungsort</dt>
+                    <dd id="detail-place"></dd>
+                </div>
+                <div>
+                    <dt>Bekanntes Werk</dt>
+                    <dd id="detail-work"></dd>
+                </div>
+            </dl>
+        </div>
+        <button type="button" class="ghost" id="detail-clear">Auswahl aufheben</button>
+    </article>
+
+    <p class="empty" id="empty">Noch niemand gewählt. Klicke auf einen Balken oder nutze Tab und Enter.</p>
+
+</main>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
